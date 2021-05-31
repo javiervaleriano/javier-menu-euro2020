@@ -1,0 +1,191 @@
+html {
+    height: 100%;
+    background: -webkit-linear-gradient(0deg, #31ccd4, #fff);
+    background: -moz-linear-gradient(0deg, #31ccd4, #fff);
+    background: -o-linear-gradient(0deg, #31ccd4, #fff);
+    background: linear-gradient(0deg, #31ccd4, #fff);
+    background-attachment: fixed;
+}
+
+
+.menu { padding: 2.5em 1em .5em; }
+
+#title {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 { margin: 0 0 .05em; }
+
+.underline {
+    background-color: #d2ac25;
+    height: .4em;
+    width: 5em;
+    margin: 0 auto;
+}
+
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    margin-top: 1em;
+}
+
+.btn {
+    text-transform: capitalize;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0 .5em .4em;
+    padding: .3em .4em;
+    background: transparent;
+    border: .1em solid #d2ac25;
+    border-radius: .2em;
+    cursor: pointer;
+
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.btn:hover {
+    color: #fff;
+    background: #d2ac25;
+}
+
+
+#block-items {
+    margin: 2em auto 0;
+    width: 70em;
+    max-width: 100%;
+}
+
+.menu-item {
+    text-align: center;
+    margin-bottom: 3em;
+    padding: 0 2em;
+    background-color: #fff;
+    border-radius: .35em;
+}
+
+.title-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    margin: 1em 0;
+}
+
+.team-name { font-family: 'Squada One', cursive; }
+
+.trophy-icon { font-family: 'Josefin Sans', sans-serif; }
+
+.team-name, .trophy-icon {
+    margin: 0 2em;
+
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s;
+}
+
+.menu-item:hover .team-name {
+    text-shadow: .03em 0 .1em #31ccd4;
+}
+.menu-item:hover .trophy-icon {
+    text-shadow: .05em -.1em .1em #ffd700;
+}
+
+.image-team {
+    height: 15em;
+    margin: 1em 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.text-item {
+    text-align: left;
+    padding: .5em 1em 1em;
+    border-top: .1em solid #808080;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+}
+.text-item::first-letter {
+    margin-left: .5em;
+}
+
+
+
+/* This media query is triggered from the width of tablets */
+@media only screen and (min-width: 768px) {
+    .menu {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    #block-items {
+        margin-top: 0;
+        padding: 2.5em 8em .5em;
+    }
+}
+
+@media only screen and (min-width: 921px) {
+    #block-items {
+        margin-top: 2em;
+        padding: 0 0 2.5em;
+
+        display: -moz-grid;
+        display: -ms-grid;
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        -webkit-column-gap: 2em;
+        -moz-column-gap: 2em;
+        column-gap: 1.5em;
+
+        row-gap: 2em;
+    }
+
+    .menu-item {
+        display: -moz-grid;
+        display: -ms-grid;
+        display: grid;
+
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 20% 1fr;
+
+        padding: .5em;
+        margin-bottom: 0;
+    }
+
+    .image-team {
+        grid-row: 1 / span 2;
+        height: 13em;
+        align-self: center;
+        margin: 0;
+        padding-right: 1em;
+
+        -o-object-fit: contain;
+        object-fit: contain;
+    }
+
+    .team-name {
+        margin: 0;
+    }
+
+    .trophy-icon { margin: .1em; }
+
+    .text-item {
+        grid-column: 2 / span 1;
+        padding: .5em .4em 0 .2em;
+        line-height: 1.15em;
+    }
+}
+
+
+
+/* font-family: 'Squada One', cursive; para los nombres de los países
+*  font-family: 'Open Sans', sans-serif; para el texto con los nombres de los jugadores
+*  font-family: 'Josefin Sans', sans-serif; para 'UEFA Euro 2020'
+*/
