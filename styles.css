@@ -7,6 +7,23 @@ html {
     background-attachment: fixed;
 }
 
+#navbar-ul {
+    list-style: none;
+    display: flex;
+}
+.navbar-item {
+    margin: .5em 1em;
+}
+.navbar-item a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Blinker', sans-serif;
+}
+.navbar-item a:hover {
+    color: rgb(124, 124, 124);
+}
+
+
 
 .menu { padding: 2.5em 1em .5em; }
 
